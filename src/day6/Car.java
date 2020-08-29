@@ -5,7 +5,6 @@ public class Car {
     private String color;
     private String model;
     private int difference;
-    int input;
 
     public void setYear(int carYear) {
         yearOfIssue = carYear;
@@ -31,11 +30,11 @@ public class Car {
         return model;
     }
 
-    public void sayName (){
+    public void sayName() {
         System.out.println("This is car");
     }
-    public void sayDifference (){
-        difference = input-yearOfIssue;
-        System.out.println(difference);
+
+    public void sayDifference(int years) {
+        difference = years - yearOfIssue;
     }
 }

@@ -3,21 +3,14 @@ package day6;
 import java.util.Random;
 
 public class Teacher {
-    public String name;
-    public String lesson;
-    public String evaluate1;
+    private String name;
+    private String lesson;
+    private String evaluate1;
+
     Random random = new Random();
 
     public Teacher(String name, String lesson) {
         this.name = name;
-        this.lesson = lesson;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setLesson(String lesson) {
         this.lesson = lesson;
     }
 
@@ -33,8 +26,9 @@ public class Teacher {
         } else if (evaluate == 5) {
             evaluate1 = "отлично";
         }
+
         System.out.println("Преподаватель " + name + " оценил студента "
-                + p.studentName + " по предмету " + lesson + " на оценку " + evaluate1);
+                + p.getStudentName() + " по предмету " + lesson + " на оценку " + evaluate1);
 
     }
 }

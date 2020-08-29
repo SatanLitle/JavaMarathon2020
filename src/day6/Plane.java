@@ -1,19 +1,17 @@
 package day6;
 
 public class Plane {
-    public String manufacturer;
-    public int yearOfIssue;
-    public int length;
-    public int weight;
-    public int fuelVolume = 0;
-    public int volume;
+    private String manufacturer;
+    private int yearOfIssue;
+    private int length;
+    private int weight;
+    private int fuelVolume = 0;
 
-    public Plane(String manufacturer, int yearOfIssue, int length, int weight, int fuelVolume) {
+    public Plane(String manufacturer, int yearOfIssue, int length, int weight) {
         this.manufacturer = manufacturer;
         this.yearOfIssue = yearOfIssue;
         this.length = length;
         this.weight = weight;
-        this.fuelVolume = fuelVolume;
 
     }
 
@@ -22,8 +20,8 @@ public class Plane {
                 "длина: " + length + ", вес: " + weight + ", объем топлива в баке: " + fuelVolume);
     }
 
-    public void fillUp() {
-        fuelVolume = fuelVolume + volume;
+    public void fillUp(int i) {
+        fuelVolume = fuelVolume + i;
     }
 
     public void setManufacturer(String manufacturer) {
