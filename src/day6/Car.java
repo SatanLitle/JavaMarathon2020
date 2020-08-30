@@ -4,7 +4,7 @@ public class Car {
     private int yearOfIssue;
     private String color;
     private String model;
-    private int difference;
+
 
     public void setYear(int carYear) {
         yearOfIssue = carYear;
@@ -35,6 +35,8 @@ public class Car {
     }
 
     public void sayDifference(int years) {
-        difference = years - yearOfIssue;
+
+        int difference = years - yearOfIssue;
+        System.out.println(difference);
     }
 }

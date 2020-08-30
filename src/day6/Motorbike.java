@@ -4,7 +4,6 @@ public class Motorbike {
     private int yearOfIssue;
     private String color;
     private String model;
-    private int difference;
 
     public Motorbike(int yearOfIssue, String color, String model) {
         this.yearOfIssue = yearOfIssue;
@@ -16,8 +15,10 @@ public class Motorbike {
         System.out.println("This is motorbike");
     }
 
-    public void sayDifference(int years) {
-        difference = years - yearOfIssue;
+    public void sayDifference(int years)
+    {
+        int difference = years - yearOfIssue;
+        System.out.println(difference);
     }
 
     public void info() {
