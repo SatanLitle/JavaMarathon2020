@@ -8,26 +8,28 @@ public class Player {
 
     public Player(int stamina) {
         this.stamina = stamina;
-        countPlayers++;
+        if (countPlayers < 6)
+            countPlayers++;
     }
 
     public void run() {
+
+        if (stamina == MIN_STAMINA)
+            return;
         stamina--;
-        if (stamina == MIN_STAMINA) {
+        if (stamina == MIN_STAMINA)
             countPlayers--;
-        }
+
     }
 
+
     public static void info() {
-        if (countPlayers == 6) {
-            System.out.println("Мест в командах больше нет");
-        } else if (countPlayers < 6 && 1 < countPlayers) {
+
+        if (countPlayers < 6 ) {
             int c = 6 - countPlayers;
             System.out.println("Команды неполные, есть еще " + c + " свободных мест");
-        } else if (countPlayers <= 1) {
-            System.out.println("Всё, наигрались");
-        } else if (countPlayers > 6) {
-            System.out.println("Количество игроков ожидающих своей очереди: " + (countPlayers - 6));
+        } else  {
+            System.out.println("Мест в командах больше нет");
         }
     }
 }
