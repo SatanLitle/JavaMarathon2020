@@ -19,7 +19,8 @@ public class Plane {
     }
 
     public String toString() {
-        return planeInfo.append(manufacturer).append(" ").append(yearOfIssue).append(" ").append(length).append(" ").append(weight).toString();
+        return planeInfo.append(manufacturer).append(" ").append(yearOfIssue).
+                append(" ").append(length).append(" ").append(weight).toString();
 
 
         // System.out.println( planeInfo.toString());
