@@ -23,8 +23,6 @@ public class Task1 {
 
             if (Integer.parseInt(zero[2]) == 0)
                 pw.println(line);
-
-
         }
         pw.close();
         //System.out.println(listcsv);
